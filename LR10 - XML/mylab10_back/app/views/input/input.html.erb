@@ -1,0 +1,8 @@
+<h3>Lab8. Ovezklychev Farkhat ICS6-34B. </h3>
+
+<p>Enter how many digits in number: </p>
+<%= form_tag("/input/output", :method => "get") do %>
+<%= label_tag("Number of digits:") %>
+<%= text_field_tag(:val) %> <br/><br/>
+<%= submit_tag("Find all Armstrong Numbers") %>
+<% end %>

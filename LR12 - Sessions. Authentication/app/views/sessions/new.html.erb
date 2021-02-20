@@ -1,0 +1,15 @@
+<!-- app/views/sessions/new.html.erb -->
+<%= form_tag '/login' do %>
+  <h1>Login</h1>
+ 
+  <label>Username:</label>
+  <input type="text" name="username" id="username" placeholder="Enter your Username" />
+
+  <label>Password:</label>
+  <input type="password" name="password" id="password" placeholder="Password" />
+
+  <input type="submit" name="commit" value="Enter" class = "btn btn-primary" data-disable-with="Login attempt"/>
+<% end %>
+
+
+

@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+}
+
+h1.main-head
+{
+    color:  solid rgb(49, 43, 128);
+    font-family:"Lucida Sans Unicode", "Lucida Grande", Sans-Serif;   
+    text-align: center;
+
+}
+
+/* Разметка таблицы через див элементы */
+
+.table
+{
+  display: table;
+  display: table;  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  border-radius: 10px;
+  border-collapse: separate;
+  border-spacing: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  border: 8px solid rgb(78, 78, 74);
+  color: #656665;
+}
+
+.col
+{
+  display: table-cell;
+  text-align: center;
+  padding: 5px;  
+}
+
+div.header1
+{
+    display: table-row; 
+    background-color: rgb(238, 48, 48);
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.row
+{
+  display: table-row;
+}
+
+
+
+.col:not(.no-p)
+{
+  padding: 4px;
+}
+
+body
+{
+  background-color: #ECE9E0; 
+}

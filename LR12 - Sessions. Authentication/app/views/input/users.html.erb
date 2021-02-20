@@ -1,0 +1,22 @@
+<h2>All Users:</h2>
+
+<table align = "center" border = "1" bordercolor = "black" cellspacing = "10">
+  <tr>
+    <th>ID</th>
+    <th>Username</th>
+    <th>Email</th>
+    <th>Password</th>
+  </tr>
+ 
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.username %></td> 
+      <td><%= user.email %></td>
+      <td><%= user.password_digest %></td>
+    </tr>
+  <% end %>
+</table>
+
+
+<%= link_to "Find Armstrongs number for another digits range", :input_input %>

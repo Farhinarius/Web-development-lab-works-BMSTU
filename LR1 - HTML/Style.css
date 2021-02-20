@@ -1,0 +1,77 @@
+h1
+{
+text-align: center;
+font-family: Verdana, sans-serif;
+text-decoration: unset;
+}
+
+table, th, td
+{
+    width: 50%;
+   
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+tx.header
+{
+    text-align: center;
+    color: black;
+    font-family: Verdana;
+}
+
+td.space
+{
+    color: dodgerblue;
+    background-color: dodgerblue;
+}
+
+td.lexion
+{
+text-align: center;
+color: black;
+background-color: limegreen;
+}
+
+td.seminar
+{
+    text-align: center;
+    color: black;
+    background-color: 	gold;
+}
+    
+td.laboratory
+{
+text-align: center;
+color: black;
+background-color: #FF3030;
+}
+    
+
+td
+{
+    text-align: center;
+    background-color: white;    
+}
+
+body
+{
+background-color: palegreen;
+}
+
+td.numerator
+{
+   text-align: center;
+   color: black;
+   background-color: white;
+}
+
+td.denumerator
+{
+    text-align: center;
+    color: black;
+    background-color: white;    
+}
+

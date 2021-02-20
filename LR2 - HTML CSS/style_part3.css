@@ -1,0 +1,52 @@
+html 
+{
+    position: relative;
+    min-height: 100%;
+}
+
+body 
+{
+    margin-bottom: 40px;
+}
+
+main 
+{
+    margin-top: 15px;
+}
+
+footer 
+{
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.space
+{
+    margin-top: 15px;
+}
+
+.my-primary 
+{
+    background-color: rgb(201, 56, 194);
+    color: white;
+}
+
+.odd
+{
+    color: yellow;
+    background-color: rgb(168, 43, 226);
+}
+
+.even
+{
+    color: yellow;
+    background-color: rgb(226, 43, 144)
+}
+
+thead
+{
+    text-align: center;
+    background-color: rgb(217, 255, 0);
+}

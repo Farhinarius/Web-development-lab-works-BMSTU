@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" type="text/css" href="styles.css">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+			integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+		<title>Lab4</title>
+
+	</head>
+
+	<body>
+	
+	<!-- HEADER -->
+	<header>
+	</header>
+		
+	<!-- MAIN -->
+	<main class="container">
+		<a href="Product_info.html">Show product catalog</a>
+
+		<div class="row">
+			
+			<div class="col-4 col-6">
+
+				<h2 class="space">Enter info about your Product</h2>
+
+			</div> 
+			
+		</div> 
+
+		<div class="row">
+
+				<div class="col-4 col-8">
+
+					<form name="/form_submit" method="get"></form>
+
+						<div class="form-group"> 
+
+							<label for="name">Name of Product:</label>
+
+							<input type="text" class="form-control" placeholder="Enter Name of Product">
+
+						</div>
+						
+						<div class="form-group">
+
+							<label>Price:</label>
+
+							<input type="text" class="form-control" placeholder="Enter Price">
+
+						</div>
+
+					</form>
+				</div> 
+		</div>
+
+		<div class="row">     
+			
+			<!-- Button Add to Cart -->
+			<div class="col-4 col-10">
+
+				<button type="button" class="btn btn-success"  onclick="AddToTable()">Add to Cart</button>
+
+				<button type="button" class="btn btn-info left-space" onclick="CountEverything('cartprice')">Count everything </button>
+
+			</div>
+
+			<!-- Add Cart Price -->
+			<div class="col-10 space" id="cartprice">
+
+				<!-- Общая стоимость покупки: -->
+
+			</div>
+
+		</div> 
+		
+		<!-- New Row -->
+		<div class="row space">        
+				<div class="col-8">
+					
+					<!-- TABLE -->
+					<table class="table">
+
+						<thead class="thead-dark">
+
+							<tr>
+
+								<th>Name of Product</th> <th>Price</th>
+
+							</tr>
+
+						</thead>
+
+						<tbody>
+
+						</tbody>
+
+
+					</table>
+				</div>
+			
+		
+		</div>
+	
+	</main>
+
+	<!-- FOOTER -->
+	<footer>
+	
+	</footer>
+
+	<script>
+		// -----------------------------------------------------------------------------------------------------------------------------
+		function AddToTable() {
+			var tbody = document.getElementsByTagName("tbody")[0]; //  looking for tbody in table
+
+			var row = document.createElement("tr"); // create new row in table
+			
+			var input_node = document.getElementsByTagName("input")[0]; //  looking for form
+			var col_1 = document.createElement("td");  // add new column in row
+			col_1.appendChild(document.createTextNode(input_node.value));   // add to this column information from form 1
+			
+			var input_node = document.getElementsByTagName("input")[1]; //  looking for form
+			var col_2 = document.createElement("td");   // add second column
+			col_2.appendChild(document.createTextNode(input_node.value));    // add to second column information from form 2
+
+			row.appendChild(col_1); // add 1-st column in row
+			row.appendChild(col_2); // add 2-nd column in row
+
+			tbody.appendChild(row); // add row in table (tbody section)
+			
+			/* Highlight */
+
+			// tbody = document.getElementsByTagName("tbody")[0]; // looking for tbody in table
+			if (tbody != null)
+			{
+				for (i = 0; i < tbody.rows.length; i++) 
+				{
+					for (j = 0;  j < tbody.rows[i].cells.length; j++) 
+					{
+						if (j % 2 != 0) /* if find second column element */
+						{
+							tbody.rows[i].cells[j].onmousemove = function() 
+							{ this.style.backgroundColor = '#2962A9'; this.style.color = '#0F0D0D'}
+							
+							tbody.rows[i].cells[j].onmouseout = function() 
+							{ this.style.backgroundColor = ""; this.style.color = "";}
+						}
+					}
+				}
+			}
+		}
+		// -----------------------------------------------------------------------------------------------------------------------------
+		function CountEverything(id) {
+			var tbody = document.getElementsByTagName("tbody")[0]; // looking for tbody in table
+			var price_in_row = document.getElementsByTagName("tbody")[0].rows;  // get all elements "td" by tag name
+			var counter = 0;
+			
+			for (i = 1; i <= tbody.rows.length; i++)   // loop, where i find can new elements
+			{
+				counter += parseInt(price_in_row[i-1].cells[1].textContent); /* !!! */                    
+			}
+
+			var record_field = document.getElementById(id); /* <div class="col-10 space" id="cartprice"> <!-- Общая стоимость покупки: --> </div> */
+			record_field.innerHTML = ("Общая стоимость заказа:   " + counter)    /* !!! */
+		}
+			// -----------------------------------------------------------------------------------------------------------------------------
+
+	</script>
+
+	</body>
+
+</html>

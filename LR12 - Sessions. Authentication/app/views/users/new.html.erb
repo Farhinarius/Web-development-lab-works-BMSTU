@@ -1,0 +1,19 @@
+<!-- app/views/users/new.html.erb -->
+
+<%= form_for :user, url: '/users' do |f| %>
+  <h1>Быстрая регистрация</h1>
+  <label>Username:</label>
+  <input type="text" name="user[username]" id="user_name" placeholder="UserName"/>
+  
+  <label>E-mail:</label>
+  <input type="text" name="user[email]" id="user_email" placeholder="e-mail"/>
+  
+  <br>
+  <label>Password:</label>
+  <input type="password" name="user[password]" id="user_password" placeholder="Password" />
+
+  <label>Confirm Password:</label>
+  <input type="password" name="user[password_confirmation]" id="user_password_confirmation" placeholder="Подтверждение пароля"/>
+  
+  <input type="submit" name="commit" value="Зарегистрироваться" class = "btn btn-primary" data-disable-with="Попытка регистрации"/>
+<% end %>

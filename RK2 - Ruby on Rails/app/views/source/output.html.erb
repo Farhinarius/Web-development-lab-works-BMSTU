@@ -1,0 +1,11 @@
+<h1>Source#output</h1>
+<p>Source array</p>
+
+<p id="source"><%= @source.join(', ') %></p>
+<p>The sum of the elements that are multiples of 3</p>
+
+<p id="result"><%= @result %></p>
+<p>Итоговый массив</p>
+
+<p id="arr"><%= @new_arr.to_a.join(', ') %></p>
+<%= link_to "Ввести другой массив", :source_input %>

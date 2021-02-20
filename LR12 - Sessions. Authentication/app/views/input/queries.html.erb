@@ -1,0 +1,24 @@
+<h2>All queries:</h2>
+
+<table border = "1" align = "center" cellspacing = "10">
+  <tr>
+    <th>ID</th>
+    <th>Number of Digits</th>
+    <th>Armstrong Numbers</th>
+    <%#  <th>User Email</th> %>
+  </tr>
+ 
+  <% @queries.each do |query| %>
+    <tr>
+      <td><%= query.id %></td>
+      <td><%= query.digit %></td> 
+      <td><%= query.arm_num %></td>
+      <%#<td> query.query_counter </td> %>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Delete last element', "/input/queries",
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %> <br/>
+<%= link_to "Find Armstrongs number for another digits range", :input_input %>

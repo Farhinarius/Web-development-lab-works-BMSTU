@@ -1,0 +1,46 @@
+h1
+{
+    text-align: center;
+    font-family: Verdana;
+    color: black;
+    text-shadow: 3px 3px 5px rgb(38, 70, 119);
+}
+
+h2
+{
+    text-align: center;
+    font-family: Verdana;
+    color: black;
+    text-shadow: 3px 3px 5px rgb(38, 70, 119);
+}
+
+.integra
+{
+    text-align: center;
+}
+
+
+
+.first_text
+{
+    text-align: left; 
+    color: rgb(0, 0, 0);
+    font-family: Verdana;
+    /* border-style: solid;
+    border-width: 3px;
+    border-color:  rgb(38, 70, 119);
+    border-radius: 10px;
+    background-color: lightgrey;
+    text-transform: uppercase; */
+}
+
+span
+{
+    color: red;
+}
+
+
+body
+{
+    background-color: white;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lab 3</title>
+    </head>
+    <body>
+        <div class="text">
+                   <ul>
+                        <li> Pentatum
+                        <li> Contatum
+                        <ul> 
+                            <li>Extatum et Oratum 
+                            <li>quis est dignus, et plurimum posse cognoverant
+                        </ul>
+                    </ul>
+        </div>
+        <div id="child_tree">Create tree ?</div>
+        <script>
+            var current_node = "&nbsp;";
+            function displayChildNodes(node) 
+            {   
+                // если нам передали элемент
+                if (node && 1 == node.nodeType) // 1 ?
+                {  
+                    var child = node.firstChild;   /* ?? */
+                        while (child)           
+                        { 
+                            if (1 == child.nodeType) 
+                            {
+                                current_node += "&nbsp;";      
+                                console.log(child.nodeName); // console output 
+                                current_node = current_node + child.nodeName + "<br>"; // add node non-break space
+                                
+                                var ChildTree = document.getElementById('child_tree');   // find div(child)
+                                ChildTree.innerHTML = current_node;  // add node to tree div(child_tree)
+
+                                displayChildNodes(child); // recuirse while exist child in tree
+                            };
+                            child = child.nextSibling;  // go to next node
+                        };
+                };
+            };
+				</script>
+        <button onclick="displayChildNodes(document.body)">Document Object Model HTML <!-- document Element --> </button>
+    </body>
+</html>
